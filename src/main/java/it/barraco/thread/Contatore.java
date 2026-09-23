@@ -9,11 +9,7 @@ public class Contatore {
         this.valoreMassimo = valoreMassimo;
     }
 
-    /*
-     * synchronized impedisce a due thread di eseguire
-     * contemporaneamente questo metodo sullo stesso oggetto.
-     */
-    public synchronized boolean incrementa(String nomeThread) {
+    public boolean incrementa(String nomeThread) {
         if (valore < valoreMassimo) {
             valore++;
 
@@ -27,4 +23,5 @@ public class Contatore {
         return false;
     }
 }
+
 
